@@ -1,0 +1,416 @@
+######################################################################################################## ###########################################
+        Question: Define the term cybercrime
+        Answer: It is every illegal behavior that takes place using electronic devices (phone, computer, internet) that results in the criminal obtaining material or moral benefits with the victim bearing a loss. The goal of these crimes is often hacking in order to steal or destroy information, and the Internet is usually a tool for it. or a stage for it
+
+3.0 [1] It is unethical behavior carried out by electronic means aimed at material returns and causing harm to the victim
+5.0 [2] It is all unethical behavior carried out by electronic devices that results in the criminal obtaining material or moral benefits with the victim receiving a corresponding loss, aimed at hacking in order to steal or destroy information
+2.625 [3] It is illegal behavior carried out using electronic devices to cause material or moral harm to the victim
+4.0 [4] It is an illegal behavior that uses electronic means that results in the criminal obtaining material or moral goals. Often the goal of these crimes is piracy, i.e. theft and destruction of information
+3.5 [5] It is all unethical behavior that is carried out using electronic means (telephone, computer..), represented in the perpetrator getting what he wants to achieve his personal goals, while the victim, who is the user, bears the punishment, represented in stealing information, for example.
+3.75 [6] It is illegal behavior through electronic devices, often for material or moral purposes to destroy or steal information, for example: fraud, electronic infringement, espionage and breach of privacy
+4.5 [7] It is illegal behavior using electronic devices, from which the criminal is charged with material and moral benefits, and the victim bears a loss in return for the purpose of the crime to destroy or steal information.
+5.0 [8] It is carried out by electronic devices that result in the offender obtaining material and moral benefits while bearing the victim a corresponding loss. And often the goal of the criminal hacking in order to steal and destroy information.
+5.0 [9] It is all illegal behavior using electronic devices that results in the criminal obtaining material and moral benefits with the victim incurring losses and the aim of which is piracy in order to steal and destroy information
+5.0 [10] It is illegal behavior by using electronic devices (telephone, internet, computer) aimed at obtaining a material or moral benefit in exchange for the victim paying losses and in order to obtain information, hack it and destroy it. Cybercrime damages losses amounting to millions for the owners of companies and establishments, and most bank robberies are with the complicity of criminals and programmers.
+3.625 [11] It is all illegal behavior using electronic devices, in which the criminal obtains material and moral benefits with the victim bearing the loss.
+4.25 [12] It is an illegal behavior that is carried out using electronic devices (phone, computer) represented by hacking the system and causing the victim a material and moral loss, and the aim is often hacking in order to steal or destroy information.
+3.625 [13] It is any illegal behavior or activity, using electronic devices such as a phone or computer, with which the criminal wants to obtain material or moral benefits while bearing the victim losses.
+4.5 [14] Illegal behavior by a person using electronic tools in order to obtain a material or moral benefit through an illegal infringement that results in either theft of material things, moral damage, extensions or espionage.
+5.0 [15] It is all illegal behavior using electronic devices (computer, mobile phone and the Internet) through which the criminal obtains material or moral benefits and inflicts losses on the victim, and the criminal often steals or destroys information.
+3.5 [16] It is an illegal behavior that depends on the use of electronic devices, in which there is a benefit to the party committing the crime and corresponding to a material or moral loss for the victim.
+3.5 [17] It is all illegal behavior through electronic devices used by the criminal to take material and moral benefits and makes the user a victim.
+3.0 [18] It is a crime that occurs by using electronic tools in an illegal manner to obtain material or moral matters from a person and incurring material or moral losses.
+3.5 [19] It is all illegal behavior using electronic devices and the Internet, from which the hacker obtains material or moral benefits, while the victim bears the losses.
+3.0 [20] It is illegal behavior using electronic devices and modern devices that benefit those who do it and cause harm to other parties, most of which are related to hacking and piracy that leads to data sabotage.
+3.625 [21] It is all illegal behavior using electronic devices, whether it is a phone or a computer, via the Internet, and this results in material benefits for the benefit of the hacker, while often assigning losses to the victim.
+2.5 [22] It is illegal behavior in which electronic devices are used and financial or immaterial benefits are obtained.
+0.75 [23] is every legal act that takes place through electronic devices.
+2.25 [24] It is any illegal behavior that is carried out using modern technologies and costs the victim great losses.
+4.75 [25] It is an illegal act using electronic devices in which the criminal benefits from material or moral profits in exchange for a loss for the victim, often with the aim of obtaining or destroying data.
+3.25 [26] It is an illegal behavior in which electronic devices are consumed, resulting in material and moral benefits for the offender and losses on the victim.
+3.25 [27] It is an illegal operation committed by an individual or group of individuals using tools and ideas in informatics, stealing or hacking systems.
+4.25 [28] It is an illegal activity that is carried out through electronic devices with the benefit of stealing or sabotaging information as it results in a loss for the victim, whether materially or morally.
+2.5 [29] It is the illegal behavior of hacking computer users to take possession of their personal information and use it for other purposes.
+3.5 [30] Crimes committed through or on the Internet by persons or organizations with the aim of stealing data, sabotaging the system, confronting persons or entities…
+4.5 [31] It is an illegal behavior in hacking systems using electronic means (internet, mobile, computer) the criminal aims for material and moral exploitation and the victim bears corresponding losses, the criminal looks up or steals confidential information.
+4.75 [32] It is any illegal behavior that is carried out using electronic means (devices) where the criminal obtains material and moral benefits and may harm the victim for the purpose of stealing, destroying or accessing information.
+2.75 [33] It is an illegal practice through smart devices in which the criminal harasss and embarrasses the user to achieve personal goals
+1.25 [34] It is all punishable behavior that occurs on the Internet.
+3.875 [35] Illegal methods and actions targeting computers and electronic software via mobile phones and the Internet aimed at taking, changing or destroying information, as well as spying on individuals and distorting their reputation in return for financial profit.
+4.75 [36] It is every illegal behavior that is carried out using electronic devices (smart phone, the Internet) that results in deliberately harming a person and in which the criminal obtains a material or moral return. Often the goal of these crimes is damage or theft. the information .
+5.0 [37] It is illegal behavior using electronic means (telephone, computer, internet) that results in the criminal benefiting from personal information with a corresponding loss to the victim and resulting in information theft and hacking.
+3.0 [38] It is a criminal behavior punishable by law using electronic devices, phone, computer, etc. with the aim of penetration for the purpose of defaming the victim.
+4.75 [39] It is every crime or violation that occurs on the Internet or through electronic devices, with the purpose of stealing, sabotaging or replacing information for the purpose of a certain interest, resulting in material or moral losses to the victim.
+4.75 [40] It is an illegal behavior in which technology and the Internet are used, as it focuses on hacking systems and programs for material or moral reasons such as information theft and destruction, threat, electronic espionage... which results in material or moral consequences for the person involved in the penetration.
+4.25 [41] It is any illegal behavior carried out via the Internet or electronic devices aimed at sabotage, extortion, exploitation and abuse that is contrary to values ​​and the law, such as: publishing immoral images, blackmail and defamation, accessing users’ data without their permission, data exploitation, assault Material and moral, spreading extremist ideas...
+5.0 [42] It is all illegal behavior using electronic devices (telephone, computer, internet) where the criminal can benefit financially or morally with a corresponding loss to the victim, often the goals of the crime are theft, alteration or destruction of information.
+5.0 [43] It is an illegal process that is carried out by electronic devices (computer, phone, Internet) that results in the criminal obtaining material or moral benefits, and the victim bears losses in return. The truth of these crimes is often obtaining information in order to steal or destroy and store it. or for other purposes.
+3.5 [44] It is an illegal act carried out by electronic means (telephone, internet, computer) whose aim is to take and rob the victim of his confidential information and things, and the victim often pays for this crime, whose aim is to destroy and steal information.
+3.875 [45] It is every crime that is carried out by using modern means (telephones, computers, the Internet) with the aim of a physical or moral investigation to carry it out, and it causes damage to the victim and incurs material losses.
+4.5 [46] They are illegal practices committed using electronic devices (computer, internet, phone) where the criminal aims, materially or morally, in return to harm the victim, most notably in order to hack information or destroy security systems..
+4.5 [47] It is the illegal behavior of the criminal against an individual, organizations, governmental organizations, ie, on others for material or moral interests that inflict losses on the victim, including sabotage, theft and alteration of information.
+######################################################################################################## ###########################################
+        Question: Define the term information security
+        Answer: Protecting and securing all the resources used in processing information from the facilities themselves, the individuals working in them, the computers used in them, and the information media that contain data, at all stages of information existence (storage - transmission - processing)
+
+4.0 [1] are the means, tools, policies, and procedures used to ensure the privacy, integrity and availability of information and to prevent unauthorized access, deletion, or infringement of information.
+3.25 [2] It is the technical, technical and administrative means necessary to be provided to protect the information processing (storage, transmission, processing).
+2.75 [3] It is the means and techniques used to strengthen security systems, so that we protect information from theft, sabotage and alteration.
+3.75 [4] It is to secure the facility itself, its employees, systems, devices and media that contain information at all stages of its existence and storage (transfer and processing)
+1.75 [5] It is to protect information from espionage and hacking by using electronic or physical means to reduce cybercrime.
+2.75 [6] is the protection and security of the resources used in the processing of information and this during all stages of processing (storage, transmission and processing)
+3.25 [7] It is to secure and protect all resources used in processing information at all stages of its processing (storage, transmission and processing).
+4.5 [8] It is to secure all the media used in the processing of information, where the facility itself, the personnel working in it, the computers in which it is located, and all the places where the data are located during transmission, storage, and processing.
+1.0 [9] is to protect information from the risk of hacking and hacking
+4.0 [10] Academically: It is the science that studies theories and strategies to protect information from threats to it, from the technical point of view: it is the means, tools and procedures necessary to protect information from internal and external dangers, from the legal point of view: it is the subject of the studies necessary to ensure confidentiality and integrity of information content.
+4.0 [11] The various means used to process information, from an academic point of view, a science that studies strategies to protect information, and from a technical point of view, the various tools and means necessary to protect information from the inside and outside, from a legal point of view, methods and regulatory legislation to protect information.
+4.0 [12] It is the use of available resources in order to protect information and data, from the academic point of view: it is the science of fighting hacking, from the technical point of view the development of technologies and programs to fight hacking, and from the administrative point of view: the use of law and legislation.
+3.0 [13] Technical aspect: Science searches for theories and strategies to provide protection for information from threats and prohibition of attack, Legal aspect: The state works to provide a system for protecting confidential information from internal and external attacks.
+2.75 [14] It is the method and method to ensure the safety of devices and information while working with them, as well as the mechanisms used to ensure their security and the security of the personnel related to them.
+4.25 [15] Academic aspect: science that uses strategies and theories to protect information, technology: tools and means used to protect information from attacks, legal: measures and obligations to protect information, in general, protecting all resources used to process information created by workers, devices and data storage media.
+1.25 [16] is to maintain all the resources used in the processing of information through all stages of information formation, storage, transmission and processing
+4.75 [17] It is the protection and security of information from sabotage (theft, alteration), the information system where every facility protects itself, protects the employees working on it, protects devices and computers, and protects the data stored in them in all media from hackers and any means of sabotage in various stages of information (storage). transfer processing).
+4.0 [18] Academic: The science that studies information protection strategies, technically: is the means, techniques, and measures necessary to ensure the protection of information, legally: is the measures that must be taken to ensure the confidentiality, integrity and availability of information and to combat the activities of attacking it, in general, is the protection of all resources used in Processing information in all forms of information availability.
+4.25 [19] From an academic point of view: it is a science that examines theories and strategies to ensure the protection of information security from the risks that threaten it and the activities of attacking it, from the technical point of view: it is all the messages, tools and procedures that ensure the protection of information from external and internal risks, from a legal point of view: It is the procedures and measures that guarantee the integrity and confidentiality of the content of the information and thus the activities that threaten it, is the protection of all the resources used on the information at all stages of its existence.
+3.75 [20] Academically: it is the science that is concerned with methods and strategies for protecting information, technically: they are the tools and means used to protect information, legally: are the procedures and measures necessary to protect and secure information
+3.25 [21] is to protect all information and the stages of its availability in order to preserve confidentiality, availability and integration: the academy: techniques and strategies, technology: the necessary tools, means and procedures, legal: studies and measures
+3.75 [22] An academic definition is the theories and methods that must be applied to protect the information system, a technical definition is the methods and policies applied to protect the information system, a legal definition is the legislative texts that protect people and institutions from piracy
+3.25 [23] Academic is the science that studies strategies and theories to provide information security, technical is the tools, procedures and means to ensure information security, legal is the necessary measures to ensure the safety, confidentiality and flow of information and to combat abuse of it
+1.5 [24] are the systems and means used to ensure the security and privacy of information and its channels
+3.5 [25] It is to secure protection for data systems so that they are not hacked, and it is based on administrative and technical protection
+4.75 [26] It is to secure and protect all resources used in information systems so that the facility itself, the people working in it, computers, and the information that contains the data in the various stages of transmission, storage and processing, are secured.
+5.0 [27] It is to secure and protect all resources used in the processing of information at all stages of its processing (storage, transmission and processing).
+2.75 [28] Protection of information and prevention of attacks that aim to steal this information, where user identification is used, the identification of the user is established, the identification of his powers and responsibilities, as well as non-denial and privacy in order to protect the information
+0.75 [29] are the methods and methods used to defend the information of users or companies
+3.0 [30] is to protect all resources used in the transmission, processing and storage of information, as well as the information used, while ensuring its availability, integrity and confidentiality
+5.0 [31] It is to secure and protect all resources used in information processing, as the facility secures itself, as well as the personnel working on it, computers and media that contain data, and this is at all stages of information existence (transportation, storage, processing), academically the science that is concerned with theories To provide protection for information, technically it is the various tools and technical means used, such as protecting information from dangers, legally are the various measures and legislation to ensure the security of confidentiality and integrity of the information provided and to combat forms of crime against it
+4.25 [32] It is to secure and protect all the resources used in processing information, where the facility, the people working in it, the devices used, and the data are secured. Academically, the theories and strategies for protecting information, and from a technical point of view, are the tools, means and procedures necessary to perform them, and from a legal point of view. These are the measures and statements to ensure the confidentiality of information and to combat abuse of it
+4.25 [33] From an academic point of view, it is the science that looks at theories and strategies to provide protection for information, and from a technical point of view, it is the means to be provided in order to protect information, but from a legal point of view, it is studies in order to provide protection and confidentiality of information, i.e., in summary, it is the protection of information in all its phases. (transportation storage processing)
+4.0 [34] From an academic point of view it is a science that studies theories and studies to protect information from burning, from a technical point of view it is the means, tools and procedures necessary to provide protection of information from internal and external dangers, from a legal point of view it is the subject of studies and measures necessary to provide safety and Confidentiality of information is a threat to it
+2.25 [35] It is the science that establishes theories and strategies for protecting information from the dangers that threaten it
+1.5 [36] is the strategy and software applications to maintain privacy (password) and not to violate laws
+3.25 [37] It is a set of security measures taken from tools, policies and other things to secure information in its storage, transmission and availability.
+5.0 [38] It is the nationalization and protection of the resources used in information processing. The facility must secure itself and secure the used devices, media and information that contain data related to it in the various stages of information existence (storage - transmission - processing).
+3.5 [39] Academically it is the science that finds strategies that allow the development of information systems, technically it is the set of tools used to strengthen electronic security defenses legally it is the subject of legislative studies to reduce cybercrime
+4.25 [40] It is to provide protection, security and confidentiality of the data and means that we work on and maintain them from every attack during all their periods (transfer, storage, modification)
+3.75 [41] Provide and ensure the protection of information from internal and external risks that threaten it, in addition to providing the necessary means, tools and measures to ensure the confidentiality and integrity of information
+2.75 [42] Provide all means and tools to protect information and avoid damages that hinder it as the facility returns itself, its employees, computers and data
+2.0 [43] is all about how to preserve individuals' information, whether from a technical, administrative or legal point of view
+5.0 [44] It is the protection and security of all resources used in information processing, where the facility and the personnel working in it, the computers used in it, and the information media that contain the facility’s data are secured in all stages of information availability (storage - transport - processing).
+2.0 [45] Various methods and procedures taken to protect information during its transmission, processing and creation
+4.0 [46] is to provide the necessary protection for information and private data from information security risks and threats by immunizing the origin, personnel, devices used and information processing means (reception - storage - dissemination)
+1.0 [47] is to provide the means and expertise to ensure the confidentiality and security of information during its storage
+######################################################################################################## ###########################################
+        Question: Define the term psychosocial engineering?
+        Answer: It is a practice that uses psychological manipulation methods to harm and deceive others and obtain confidential information through which security is breached by non-technical means via telephone, e-mail, web pages or face to face
+
+2.5 [1] They are psychological (mental) manipulation methods to deceive others with the aim of stealing their data or spying on their confidential information
+2.0 [2] It is the manipulation of the human mind and thinking, and it deceives and deceives the human being in all respects
+2.5 [3] It is a process based on psychological (mental) manipulation to harm others and deceive them into obtaining confidential information
+4.25 [4] It is the direct interaction with people to extract information from them and not through complex means and is done by phone; face to face; E-mail.
+2.25 [5] is the practice of manipulating ideas, spamming or threatening and coercing others to obtain confidential information.
+2.0 [6] Psychological methods and methods to lure and entrap people and delude them of their credibility and intent to understand, such as sending an email with a site to confirm personal identity, which is not the original site to overthrow and steal people's personal data.
+2.25 [7] It is a practice that uses psychological awkwardness by stealing information and confidential numbers of people. It is considered one of the most prominent and most important human crimes, such as a site where a group of vandals penetrated the site, that is, when the user enters, he is transferred to a site similar to stealing confidential numbers from him.
+2.5 [8] It is the practice of all psychological and mental manipulation methods to deceive others and to obtain material or moral benefits for the user.
+2.0 [9] is the use of psychological manipulation methods and tools to commit crimes.
+3.0 [10] Techniques to deceive and harm others to obtain confidential information to hack Not in a technical way There is no technology to prevent this used in the affairs of life.
+4.75 [11] It is the practice of using psychological (mental) manipulation techniques to harm, deceive, and obtain information, through e-mail, telephone, face-to-face or websites.
+1.75 [12] It is the manipulation of the victim's psyche and mind with temptation to obtain certain information
+2.25 [13] It is the practice of deception of the mind in order to obtain confidential information
+2.5 [14] It is the practice of using psychological manipulation techniques to harm and deceive others in order to obtain confidential information.
+2.75 [15] It is a practice that uses mental and psychological manipulation techniques to harm others and in order to facilitate the theft of confidential information from them.
+2.5 [16] It is a practice that relies on deception and fraud methods for the purpose of hacking passwords or people’s information, the most prominent example of which is a site that drags users to fake products for an original site in order to gain their information, the password and others.
+4.0 [17] is the psychological manipulation method to deceive others and steal information from them: over the phone; By email; face to face
+5.0 [18] It is a practice that uses psychological (mental) manipulation to harm and deceive others and obtain confidential information. Methods: telephone/e-mail, face-to-face and web pages.
+2.75 [19] It is the practice of psychological manipulation methods (mental) to disguise the user, and it is a form of hacking techniques in cybercrime on the Internet, so that the fraudster uses phrases that camouflage the user
+1.5 [20] is the practice of using mental and psychological manipulation to deceive and harm people to obtain confidential information
+4.0 [21] Collecting information about the victim through psychological manipulation and delusion through false e-mails through which the hacker obtains personal information that allows him to access the victim's accounts
+2.75 [22] is a field based on the politics of seduction and fraud. It may be used on the Internet or even other areas of life. It is not necessary for the person to be a professional in cybercrime
+2.25 [23] It is a method that relies on psychological and mental manipulation to deceive, harm, and obtain confidential information
+2.25 [24] is the practice of psychological manipulation techniques to harm and deceive people into stealing confidential information
+4.5 [25] It is a method in which mental manipulation methods are used in order to obtain the personal information of the victim without the use of electronic technologies via the phone, social spaces or face to face.
+2.75 [26] It is a method used by hackers to bring down electronic systems in which they rely on the human side to obtain personal or system-related information to help the hacker break the security of the system because people trust others and social engineering does not require technical skill and cannot be stopped
+2.5 [27] It is a policy that uses mental manipulation and deception in order to obtain private personal information
+2.5 [28] It is a modern technology that relies on manipulating the psychological and mental aspect of the victim in order to steal information
+2.0 [29] is the exploitation of the psychological aspect of the victim in order to influence him and that is easier for the implementation of cybercrime
+3.25 [30] It is a crime that depends on psychological, mental deception, and manipulation of people in order to steal information. The theft may amount to stealing their personal information as a password, and its difficulty lies in the fact that people trust each other that cannot be eliminated by technical methods that do not depend on a technical means. .
+1.0 [31] is a hacking method used to exploit other people and deceive them to obtain important information and thus hack it
+2.5 [32] Are the methods and means used to deceive and deceive users in order to reach their goals, such as obtaining the victim's information, using for example temptation and taking advantage of a person's weaknesses
+2.5 [33] It is the use of psychological, mental manipulation, to harm and deceive others and to obtain their information
+3.0 [34] is to manipulate people's minds and exploit their goodwill to obtain information that can later be used in hacking operations
+4.25 [35] It is a practice that uses psychological (mental) manipulation to harm and deceive the user in order to steal and destroy identity without the use of software, and this manipulation is by mobile phone or sending emails or private messages that are face
+2.5 [36] It means the intellectual, psychological and mental assault on people, as the human element is the main aspect in maintaining security in order to acquire their data, as people believe others and there are no techniques to combat this technology
+1.25 [37] It is the self-management of hacking the mind to obtain personal information from another person. And it is from anyone
+0.25 [38] It is the art of being able to know what a particular person wants and to lure him into what he loves for a specific purpose that we want.
+2.75 [39] It is to deceive people with the intent of defrauding and defrauding them, and this is because of excessive confidence or methods of persuasion are effective
+4.25 [40] It is a practice that uses psychological manipulation techniques in order to obtain confidential information such as what happened on a telephone site.
+2.5 [41] is the use of psychological influence methods to deceive the victim into obtaining confidential information
+3.0 [42] is the practice of psychological manipulation techniques to harm and deceive people into obtaining confidential information and there is no technology to prevent such
+1.25 [43] is the practice of psychological manipulation techniques to steal information
+3.25 [44] The use of psychological manipulation methods to obtain information through social media, telephone or face-to-face
+2.25 [45] A term used to describe a person from a psychological point of view to study his negative points
+3.0 [46] is the practice of psychological manipulation techniques to harm and deceive people into obtaining confidential information such as e-mail and identity theft
+2.25 [47] It is an engineering that does not require electronic devices that mislead and deceive people
+3.0 [48] are all means of deception towards a person to deceive him and steal his private information
+######################################################################################################## ###########################################
+        Question: Define the term money laundering or money laundering
+        Answer: Legitimizing dirty money often derived from the illegal trade in drugs or other by employing it in fake online activities
+
+2.5 [1] It is the use of funds of illegal sources in legal activities
+1.0 [2] It is by purchasing through various websites and transferring money
+0.75 [3] is to cover illegal business
+0.0 [4] It is the use of the Internet to crack sites dedicated to the financial side so that he can enter into its system to change its work, so he can launder money and even steal it
+0.0 [5] is the crime of drug trafficking on the Internet
+0.0 [6] It is illegal behavior and it is considered a financial crime as it is carried out via the Internet through organized crimes, data change or theft of card numbers
+0.0 [7] Fake credit cards, impersonation to steal money, fake currency programming.
+1.5 [8] It is the return of illegal money (stolen) through the electronic network, converting it to legal money by placing it in electronic stores such as the Maldives.
+0.25 [9] Money is counterfeited in a similar way, or this phenomenon is witnessing a great emergence in recent times, and only the special devices in banks or financial interests reveal this.
+1.25 [10] Mafia groups' uses of the Internet to implement their plans in fraud, dealing with and transferring money, which is a type of financial crime.
+4.5 [11] It is the use of illegally acquired funds (drugs and thefts) in large business and investments, and the Internet is a place to transfer and launder these funds in a correct manner between expenses and banks, as they deal with them through the Internet.
+0.5 [12] It is considered one of the physical crimes that occur via the Internet.
+1.25 [13] It is the transfer of illegal and anonymous funds from one account to another account in order to highlight its source so that it becomes legal money on the Internet.
+1.0 [14] It is the transfer of money to accounts abroad under the cover of buying something but not for its real value but for multiples.
+1.0 [15] Approximately 1,600 billion dollars of money is laundered annually, meaning money that is not produced or legally earned, that is, it is not from the producers of banknotes.
+1.75 [16] This is due to a group that had a laundry company and they are originally a drug mafia using the company's money to trade drugs (hiding their reality behind the Internet).
+0.0 [17] is the process of money fraud ie the theft of money from e-mail.
+0.5 [18] It is a method used by the mafia in America, so that his illegal money becomes legal money through the washing machine that he owned, so he legislates the money as if he won it by means of a washing machine, and it also applies to the Internet.
+0.5 [19] is one of the electronic financial crimes.
+3.75 [20] is a term intended to use illegally obtained funds for legal and charitable projects.
+0.0 [21] The use of the Internet in counterfeiting money.
+0.5 [22] is the money generated from the drug trade via the Internet.
+0.75 [23] Investing illegal funds in legitimate business.
+1.75 [24] It is a type of financial cybercrime that takes place when drugs or materials manufactured via the Internet are sold and then the money obtained is entered into banks and taken out.
+3.25 [25] Possessing illegal funds and entering them into a system or institution to return legal funds.
+3.75 [26] It is a term given to the process of camouflaging that money with profits obtained is legitimate from a legitimate activity (factories), and in fact it is illegal money from an illegal trade (drug trade on the Internet).
+2.5 [27] The money is obtained by stealing and hacking banks and then using this stolen money for peaceful purposes.
+3.25 [28] It is a type of financial crime that makes the Internet a tool for crime: It appeared in the United States of America in relation to a money laundering company for the mafia, where in the trial of the mafia leader all the money resulting from the sale of drugs was seized.
+2.0 [29] is the theft of victims' money and extract it by buying products from shopping sites and taking them without consequences for actually reselling them.
+0.5 [30] It is one of the financial crimes that are committed on the Internet, where the criminal works by changing the data and statistics to deceive a person’s income.
+4.0 [31] Exploitation and circulation of funds of illegal origin in legal investments to give them a legal appearance.
+3.25 [32] To obtain illegal funds and use them for a legitimate purpose or deposit them on financial accounts via the Internet.
+3.25 [33] The use of money held by illegal means in large projects and often declared that it is money borrowed from the bank.
+2.25 [34] is the legalization of forbidden funds by depositing them in multiple banks.
+3.0 [35] It is the legalization of money obtained illegally and illegally, such as drug trafficking, usually by resorting to banks.
+0.5 [36] Gaining money through illegal methods such as credit card fraud and storing it in banks.
+1.25 [37] Computer criminals use the Internet to launder or launder their money through drug trade, which has become one of the cyber crimes, as there are sites for drug and illegal drug trade.
+3.25 [38] Is the transfer of illegal funds into legitimate funds, by trying to enter them into the central banks to be considered an entity that works with legitimate funds, and this is by changing or adding data in the database, and also using credit cards and participating in transferring funds from the victim to Criminal .
+0.0 [39] is a term coined in 1931 by the Mafia.
+3.25 [40] It is a term derived from the name of a mafia company that was trading in drugs, so the court confiscated these funds and is based on transferring and inflating balances through transfers to hard currencies from and within the country using illegal methods such as confiscation of goods and Trafficking in drugs...
+2.125 [41] Returning money obtained illegally as money obtained by legal means by defrauding some sites or in different ways, such as buying virtual currencies, for example.
+2.5 [42] It is often represented in the drug and contraband trade through Internet sites in order to recycle the money of the contraband trade to bank accounts without imposing control on it or knowing its source.
+5.0 [43] It is classified in the category of financial crimes, which is to make illegally acquired money as legally earned money by investing it in Internet projects (buying and selling sites) in order to draw attention and distract the owner.
+1.5 [44] When a large number of money is stolen and then it is calculated as if it was entered by another party and transferred.
+0.5 [45] Counterfeiting the latter and issuing banknotes illegally, which is a crime that has been criminalized and punishable.
+0.5 [46] It is done by robbing users of their financial accounts and stealing their money and sending it to another person. The stolen person may be in one country, the thief is in one country, and the operator who owns the account is in another country.
+3.5 [47] It is the process of buying on the Internet with the money that resulted from an illegal process such as drug and arms trafficking: the owners of this money aim to buy and then sell what they bought and thus they have a legal source of money and this sale and then their money becomes clean.
+3.5 [48] It is an electronic information crime through which data is altered and forged, as it is considered a financial crime, as well as forging fake transactions, and all this is to prove. The existence of clean financial values ​​in the world of information and from it laundering real dirty money.
+4.0 [49] Transferring money stolen or earned through drug dealing or illegal transactions to banks or mixed with ordinary money is indistinguishable.
+4.75 [50] Criminals who obtain money illegally and illegally such as drug criminals and fraudulently enter these funds through electronic computers on the grounds that they are legal projects and also change the currency in these computers.
+4.75 [51] Converting illegally acquired funds into legitimate funds by exploiting them in conducting electronic commercial transactions or transferring them through banks.
+4.25 [52] Changing records and data and returning money obtained illegally through a change in the material return or transferring it to a fictitious account.
+######################################################################################################## ###########################################
+        Question: Define the term biometrics
+        Answer: It is the science that uses the statistical analysis of a person’s vital characteristics in order to ascertain his personal identity by using his unique characteristics, which are behavioral and physical characteristics.
+
+3.75 [1] It is the science that specializes in the use of statistics of human vital characteristics to ascertain his identity through his unique characteristics
+4.25 [2] It is the science that uses statistical analysis of using parts of the human body to identify and verify the identity of the user such as handprint, fingerprint, face, retina, voice, manual signature
+3.5 [3] It is the science that is concerned with counting the vital characteristics of humans in order to prove their identity
+4.0 [4] is a statistical analysis of the behavioral and physical characteristics of the user to establish his identity
+0.75 [5] is a way to find out someone's identity means all their information in one way
+3.5 [6] It is the science that specializes in the statistical analysis of human traits and through which one can identify his identity
+5.0 [7] It is the use of personal characteristics in identification and is divided into two parts: physical and behavioral biometrics, physical uses physical characteristics such as: fingerprint, handprint, DNA, face, as well as iris of the eye, behavioral: attributes related to behavior, hand signature, voice, keyboard strokes.
+2.25 [8] Is the use of identity check mechanisms, and these mechanisms check parts of the human body for special things such as the voice
+3.5 [9] A science that uses the statistical analysis of the biological characteristics of people to determine their identity
+0.0 [10] is the system's risk of being hacked
+3.75 [11] It is the science that uses the statistical analysis of the vital human traits in order to ascertain their personal identity
+3.75 [12] It is a Greek word meaning life and measurement, and it is a science concerned with the statistical analysis of the vital human traits, as it is used to ascertain personal identity.
+3.75 [13] It is a set of means and programs used to measure and test a person in terms of physical (handprint, fingerprint, DNA,) or behavioral (voice, signature), and it is used in order to secure and maintain confidentiality.
+3.5 [14] It is a science that uses statistical analysis of vital human traits to obtain personal identity
+4.0 [15] is a Greek term based on the use of biometrics (adjectives) of individuals as a method of protection divided into behavioral and physical measurements, physical measurement: fingerprints (hand, eye and finger), DNA, behavioral measurement: voice, hand signature, keyboard strokes.
+3.75 [16] It is represented in the human characteristics in terms of the face, eyes, hands and the behavior of the person who did it, where the human characteristics are biological and behavioral measurements, it is the science that is used for statistical analysis.
+2.5 [17] It is the use of mechanisms to check identity, and these mechanisms examine parts of the human body or examine special matters such as the voice
+2.5 [18] It is a system or program that uses statistical analysis of vital human traits to obtain personal identity
+3.5 [19] The science that uses the statistical analysis of human traits to identify people using their unique characteristics
+3.5 [20] Bio Metrics It is a combination of two words bio means life metrics and means measurement where people measure using statistical analysis of human traits in order to identify their personal identity.
+3.5 [21] The science that uses statistical analysis of a person's vital traits to ascertain their personal identity
+3.75 [22] Greek word consisting of bio life and metrics, the science that uses the statistical analysis of vital human traits to identify people using their individual traits
+3.5 [23] Techniques for identifying a person by their individual characteristics such as fingerprint and iris
+3.0 [24] is a Greek word composed of two words bio, meaning metrice, meaning measure, a science concerned with the analysis of human vital qualities such as his moral and physical qualities
+3.25 [25] It is a method of protecting information security and it is represented in several behavioral characteristics that are unique from one person to another, such as a fingerprint
+1.25 [26] It is a science that studies the unique human condition that distinguishes one person from another
+3.25 [27] is a statistical analysis of a person's vital characteristics and identification using his or her unique characteristics
+2.25 [28] is the measurement of the vital and distinctive characteristics of each person such as fingerprint and iris
+2.25 [29] It is a science that uses the statistical analysis of human traits in the direction of his identity using unique traits
+2.25 [30] It is a method by which identification is more secure than passwords. It is divided into two parts: behavioral characteristics such as fingerprint and voice recognition, physical characteristics such as fingerprint, fingerprint, iris of the eye and ADN
+3.75 [31] It is a science that depends on the analysis of the unique characteristics of a person whose goal is to ascertain the identity of a person
+2.75 [32] It is a science that uses changes in the vital characteristics of a person and thus to facilitate the proof of his personal identity using his characteristics and behaviors.
+2.75 [33] It is the use of biophysical or behavioral measurements for protection or prevention
+2.75 [34] It is a measurement that allows the identification of the user through the organs in the human body, such as the fingerprint of the hand or the iris of the eye, as well as the study of human behavior in order to confirm his identity
+2.75 [35] It is a science concerned with the study of the standard statistics of the biological characteristics of every human being
+4.75 [36] It is the precise science that is based on the statistical analysis of human traits and behaviors, where we distinguish two types, physical traits and behavioral traits, physical is everything related to a part of the body, such as iris imprinting, and behavioral is what is related to an individual’s behavior, such as voice signature, keyboard strokes.
+4.0 [37] is the science that performs statistical analysis of unique human traits to confirm the identity of users such as face, handprint, iris
+1.5 [38] It is the process of analyzing the characteristics of a person in order to identify his identity
+3.0 [39] is the science that uses unique human characteristics to ascertain their identity
+0.0 [40] is a standard for measuring
+4.0 [41] It works on counting different human characteristics and entering them into the database, which facilitates many operations and protects private information, including two categories: biophysical measurement (fingerprint, handprint..), behavioral biometric (voice, electronic signature).
+2.25 [42] are behavioral characteristics and physical characteristics related to escape for identification and verification
+3.75 [43] It is a science that (studies) the statistical study of human traits to determine his personal identity using his unique traits
+3.5 [44] It is a set of qualities and characteristics that a person has, such as his voice, the color of his eyes or his fingerprints, and others that are used to achieve privacy and security of electronic systems.
+3.25 [45] It is the science that is based on the statistical analysis of the vital characteristics of the organism in order to reach the identity stability in a certain way
+2.5 [46] It is the science that studies the vital human traits and interest in the study of unique traits
+1.5 [47] Statistical science of human behavior consisting of (bio) science and (metric)
+0.75 [48] is identification methods such as biometrics
+3.5 [49] It is the science that uses statistical analysis of human vital traits to identify their personality using their unique traits
+3.25 [50] is the statistical analysis of a person (attributes) used to confirm his personal identity
+2.25 [51] It is a protection method where behavioral and physical characteristics are used to increase security within institutions and protect privacy
+3.5 [52] It is a biostatistical study of human psychological and kinetic traits in order to enhance the security level
+######################################################################################################## ######################################################################################################## #### ###############################################
+        Question: Define the term organized crime on the Internet
+        Answer: It is organized violence carried out by groups that commit acts that violate the law to obtain financial gain, by illegal means and methods carried out after planning and organizing
+
+4.0 [1] It is a crime committed by individuals or groups after planning and organizing with the aim of stealing data or money or extorting other people
+0.75 [2] It is an illegal behavior in which the swindle deceives or blackmails people, as companies and institutions are characterized
+4.0 [3] Organized violence carried out by organized groups whose aim is to penetrate the safe in order to obtain material (financial) gain, and this crime is after the organization and preparation
+2.25 [4] are crimes that rely on intelligence and planning; Indirect through an organized chain of events involving multiple parties and multiple victims, these crimes are so complex that they cannot be detected until it is too late.
+3.75 [5] It is a crime committed intentionally by individuals or organizations with prior organization and arrangement (organization and material gain).
+4.0 [6] They are groups or organizations that break the law in order to make money. They have two characteristics: - Organizing, making money.
+4.0 [7] is organized violence perpetrated by groups that break the law for financial gain (organization/material gain)
+3.0 [8] Methods of deception and harm to others to obtain confidential information, for example...
+0.5 [9] A crime is an illegal behavior that is carried out using the Internet to obtain benefits and material or moral information for the user, for example: theft or destruction of information
+4.0 [10] It is an offense committed by a group of persons after elaborate and well-organised. Often the goal is material profit.
+2.75 [11] Organized violence to pursue illegal financial demands on the Internet.
+3.5 [12] It is related to financial crimes and it consists of two main parts: organization and material gain
+3.5 [13] - It is a crime in which the Internet is the subject of the crime, through which information can be stolen; data; For money.. it depends on the organization and the financial aspect.
+2.5 [14] It is the mastery of several sides for the sake of the process of penetration and for the sake of financial gain and to be organized.
+4.5 [15] It is organized violence carried out by a group that commits acts that violate the law in order to obtain financial gain, and it has two characteristics: 1 - organization; 2- Financial gain.
+2.0 [16] is a type of financial crime that depends on a group of saboteurs whose goal is to steal and rob people's money
+2.5 [17] It is organized violence carried out by organized groups for the sake of theft, material gain, or sabotage.
+0.75 [18] is an online crime such as cyber terrorism; Intellectual property crimes...
+4.0 [19] is organized violence perpetrated by criminal groups that commit illegal acts (such as hacking) for financial gain.
+2.25 [20] It is one of the most dangerous types of crimes on the Internet to achieve a quick financial and informational profit because, as its name suggests, it is a crime that uses illegal and organized means at the same time to completely penetrate electronic systems.
+4.5 [21] It is an organization by which a group of people carry out illegal behavior in order to earn money and it has the characteristics of organizing and earning money, and it is one of the methods of hacking crimes
+1.5 [22] It is a crime that occurs over the Internet by a group of hackers with the aim of hacking, stealing information, changing it, or sabotaging systems
+2.5 [23] It is a crime committed by an organized and coordinated group for financial purposes
+1.75 [24] It is a crime that occurs on the Internet, where the criminal targets the information that is transmitted or stored in it, which is very organized, and it is the types of hacking, hacking of hostile websites, electronic espionage, and electronic terrorism.
+1.25 [25] It is a gang that destroys an operation to do theft or so on the Internet
+0.0 [26] is the crime that occurs on the Internet using browsers such as cyber terrorism and hostile websites
+0.0 [27] is the crime in which the Internet is the subject of the crime, usually the information on the Internet is the target that the criminal seeks to reach
+0.0 [28] is that the network is the subject of crime
+3.5 [29] It is a violent crime committed by a group to obtain money and is characterized by organizing and obtaining money
+2.75 [30] It is a type of hacker, which is a person or group of people who commit a crime orchestrated through the Internet and are characterized by order and criminality to earn money.
+0.0 [31] is the practice of violence to get the criminal to get money
+1.5 [32] Money theft and transfer, use of information for illegal purposes, threats, forgery.
+2.25 [33] Crime on the Internet is centered on the system, often aimed at embezzlement of funds. Sometimes it is a complicity between organized workers and crackers
+0.75 [34] It is the association of regimes and people to commit a crime via the Internet
+2.25 [35] Organized crime is like a regular crime, but organized and in a way as if it was done by any planning and organization of the process
+3.0 [36] is organized violence carried out by groups using illegal methods to obtain material gain
+2.0 [37] are criminal organizations that use the Internet to communicate and plan crimes
+4.0 [38] It is a group of people who carry out a sabotage act in an organized manner, whether infiltrating information to change it, destroying it or stealing subscription and account numbers, it has two characteristics: organization and material gain, meaning that it benefits financially from its crimes
+3.0 [39] is based on organization, intelligence, accuracy and speed of attack, where the criminal uses the Internet to discover loopholes or mention and manipulate its users to reach his goals and inflict heavy losses on the victims
+1.75 [40] It is an illegal behavior that is carried out by electronic devices (phones, the Internet) for material or moral benefits, and the victim collects large losses and may be material losses, and the goal is often hacking in order to steal and destroy personal information
+2.5 [41] be by a group or person
+2.75 [42] of financial crimes, located via the Internet, where a person or group of persons performs an illegal act in exchange for payment, characterized by ease of organization on the Internet and financial gain
+1.5 [43] These are crimes that aim to make money in an organized way, such as hacking companies
+0.75 [44] It is to lure the victims in clever ways in which to gain the trust of the victims. It appears that they are temptations that end in a negative way.
+5.0 [45] It is organized violence carried out by groups in order to earn money and depends on the organization and earn money
+4.25 [46] It is illegal behavior based on regulation with the aim of printing or changing information
+4.5 [47] It is organized violence carried out by a group to steal money illegally
+4.0 [48] is organized violence carried out by a group to obtain material gain by penetration
+3.25 [49] It is organized violence carried out by a group through electronic means of penetration in an organized manner in order to steal information
+3.0 [50] It is a financial crime that takes place after two stages of planning and then financial gain
+3.25 [51] Organization is carried out by groups with the aim of reaching a material purpose, and it is known as organization and material purpose
+######################################################################################################## ######################################################################################################## #### ###############################################
+        Question: What are the main types of malicious software
+        Answer: Viruses, worms, trojans, and downloads
+
+5.0 [1] Viruses, worms, Trojan horses and download programs.
+3.75 [2] Viruses, worms, Trojan horses.
+3.875 [3] Worms are done by searching for loopholes in the program and then hacking it, Trojans, the program is on an innocent basis and as soon as it is run until the device burns, download programs: are programs that fight anti-virus programs for burning.
+2.5 [4] Trojans, worms, rely on encryption, circumvent antivirus programs in order to transmit and install viruses.
+2.875 [5] Viruses, worms
+3.375 [6] worm virus trojan horse
+3.875 [7] Viruses, worms, trojan horses, worms.
+1.0 [8] appears to be a useful program as Trojan horses. It sometimes comes within the folds of a software crack. Once you enter it, you enter the computer software.
+3.75 [9] Viruses, trojans, worms.
+5.0 [10] Viruses are malicious programs that associate with other programs and when they run, they multiply, worms directly target security holes in the system, Trojans are peaceful in appearance, but their interior is malicious, download programs make viruses and when working on the computer they activate and spread viruses.
+1.0 [11] Viruses, spamming, intrusion and serialization.
+3.75 [12] Electronic viruses, worms, Trojan horses, virus download and spread systems and antivirus evasion.
+######################################################################################################## ######################################################## #### ###############################################
+        Question: What are the forms of harassment that a user of social media (Facebook, ...) can be exposed to?
+        Answer: Harassment, slander, defamation, intimidation or threat, posting inappropriate pictures
+
+4.5 [1] Harassment, embarrassment, slander, defamation, moral and physical threat using inappropriate images
+5.0 [2] Defamation, cursing, posting bad pictures, blackmail, exploitation, slander
+3.0 [3] Extortion, threats, defamation, posting of disturbing user images
+5.0 [4] Bullying, slander, threats and intimidation, defamation, posting inappropriate pictures, blackmail and identity theft
+2.0 [5] Extortion, threats to post explicit images online, physical harassment of the user.
+5.0 [6] Hacking, defamation, cursing, posting inappropriate images, harassment.
+5.0 [7] Hacking, Threatening, Defamation, Infiltration and Shadowing, Defamation, Intimidation, Posting inappropriate Pictures, Hacking with Password Taking.
+4.75 [8] Posting inappropriate pictures, cursing and slandering, threatening and intimidating, e-mail theft, espionage and personal violation.
+4.5 [9] Violence, posting inappropriate pictures, slander, defamation.
+2.75 [10] Intimidation via messages, posting pictures on various websites, threats.
+4.5 [11] Insults, threats, extortion, defamation, whether with information or pictures
+5.0 [12] Harassment - Insults - Immoral images - Posting perverted ideas and corrupt content
+5.0 [13] - Unlawful posting and blackmailing of his photos, defamation, slander, insults, slander, violation of privacy.
+5.0 [14] Insults and slander - Intimidation and threats - Harassment of children and adolescents - Posting inappropriate photos of the user - Espionage.
+4.0 [15] - Stealing user information (photos, files...) and money, cursing, insulting and hateful speech, posting inappropriate pictures and information.
+5.0 [16] Harassment, threats, cursing, posting inappropriate pictures, defamation.
+1.75 [17] Threatening, spying, stealing information
+5.0 [18] Harassment - Insults and slander - Defamation - Intimidation and threats - Posting inappropriate pictures.
+5.0 [19] Threats and intimidation - Insults and slander - Defamation - Posting inappropriate pictures - Contradictions
+4.5 [20] Hostilities, slander, defamation, threats to publish photos and personal information
+5.0 [21] Defamation, Insults, Posting Bad Pictures, Defamation, Exploitation, Defamation
+4.25 [22] Extortion and threats, defamation, slander and insults, identity theft, publishing and threatening to disseminate user images, electronic terrorism, harassment and exploitation of children
+3.5 [23] Insults, defamation, posting inappropriate pictures
+5.0 [24] Insults and fraud, espionage and information theft, defamation and threats, posting explicit pictures, harassment and slander
+5.0 [25] Harassment, harassment, slander, defamation, threats to publish obscene images, blackmail
+2.25 [26] Impersonation, blackmail, posting private photos
+4.0 [27] Insults, cyberbullying, blackmail, harassment
+5.0 [28] Harassment, embarrassment, posting inappropriate pictures, slander, defamation, threats and intimidation
+4.0 [29] Harassment, defamation, posting inappropriate pictures, fraud and theft
+1.25 [30] Cyber ​​bullying, hostile religious, political and personal bullying, terrorism
+3.0 [31] Insults, threatening messages, publishing his private photos and attacking them
+4.0 [32] Defamation, cursing, posting inappropriate pictures, cyber attacks
+5.0 [33] Threatening, cursing, slander, defamation, posting pictures of spam
+5.0 [34] Threats and intimidation, cursing, defamation, posting inappropriate pictures, embarrassment, and all of this falls within the scope of electronic infringement.
+3.5 [35] Threatening Posting inappropriate pictures, cursing, slandering, threatening and intimidating
+5.0 [36] Defamation, posting inappropriate pictures, cursing, intimidation and threats to others
+5.0 [37] Harassment - hazing, insults, defamation, blackmail, posting inappropriate images - warning, threat and intimidation
+4.0 [38] Insults, defamation, posting inappropriate pictures, impersonating and using them for illegal purposes
+3.25 [39] Defamation, blackmail, use or theft of profile pictures, undesirable persons
+4.5 [40] Extortion, threats, defamation, deception, dissemination of anti-religious ideas, fraud
+3.5 [41] Persons may be subjected to harassment, insults, slander, defamation and blackmail
+2.75 [42] Spamming Psychological Social Engineering Defamation Intimidation
+5.0 [43] Blackmail - Defamation - Threatening - Seducing children and minors - as well as attempting to change beliefs and ideas
+5.0 [44] Insults, slander and cursing, posting indecent pictures and posting inappropriate videos, threatening and intimidating by sending messages
+2.5 [45] Via Facebook Email WhatsApp Twitter Viber Insults Threatened Posting scandalous photos
+4.0 [46] Opposition Intimidation Defamation Posting inappropriate pictures of the victim and others
+4.5 [47] Defamation, cursing, harassment, slander, posting personal photos
+4.25 [48] Harassment Seduction Inappropriate images (privacy of the individual) Blackmail Defamation Insults
+######################################################################################################## ######################################################################################################## #### ###############################################
+        Question: What kind of cybercrime could you be the victim of via an email telling you that someone wanted to share prizes or money with you?
+        Answer: Fraud crimes are classified in the first group that occur on the Internet, that is, the network is a place of it
+
+3.0 [1] Fraud and extortion, which are crimes that occur on the Internet and fall within the psychological social engineering
+0.25 [2] Psychological social engineering categorizes crimes committed on the Internet
+2.5 [3] Fraud Crimes, Category: Crimes that occur on the Internet.
+1.25 [4] are hacking crimes, general classification: crimes committed on the Internet.
+2.75 [5] Cyber ​​infringement I classify as crimes that occur via the Internet
+0.75 [6] Psychosocial engineering; If the user believes it, through it he can take information and data and even the user’s password and hack it, the crimes of electronic espionage.
+3.75 [7] Crime: Fraud, fraud and threats are classified among the crimes that occur through the Internet.
+3.25 [8] Fraud crimes, for the general classification: financial crimes.
+4.0 [9] Fraud, General Classification: Internet Organized Crime
+2.0 [10] Hacking, general classification: by network So the network is a tool of crime.
+2.75 [11] Hacking crimes, classified as crimes on the Internet (the network is the subject of the crime)
+2.0 [12] Crime of Espionage and Violation of Privacy, Classification: Crime committed via the Internet.
+1.75 [13] Crimes that occur via the Internet.
+1.5 [14] Spamming Classifying it as an Internet crime
+0.0 [15] Hacking crimes, they use the means of temptation by messages
+2.5 [16] Fraud and Fraud Crimes
+3.25 [17] Fraud, which is classified according to the general classification as a crime by the Internet
+0.0 [18] Organized crime categorized located on the Internet
+1.5 [19] The crime of fraud and fraud
+0.75 [20] Social engineering crimes because how can an unknown person share rewards with someone he doesn't know, that is, he uses these tricks to get information
+0.5 [21] Crimes of penetration, which is called the crime of dumping electronic messages and is classified in crimes that occur on the Internet
+2.5 [22] Fraud crimes, general classification: Among the crimes that a network is a tool for.
+1.5 [23] This crime is of the type that occurs through the Internet, it depends on trust and depends on any experience or intelligence in hacking operations.
