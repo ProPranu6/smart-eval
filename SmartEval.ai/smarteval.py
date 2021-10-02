@@ -7,11 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1BuBdiioR7jSg0upTGXpF3vwcFsfXE6g-
 """
 
-!pip install sentence-transformers
 
-!pip install textblob
-!pip install symspellpy
-!pip install tqdm
 
 from sentence_transformers import SentenceTransformer
 import sklearn
@@ -48,7 +44,7 @@ def evaluate(student_answer=None, teacher_answer=None, abbr_vocab=None, gen_cont
 
   #Acronym Replacement helps pick right match( because the trained data are highly likely to have seen abbreviations than acronyms and thus they know the context well when they have seen it)
   #Removing the stop words significantly improves the preference ratio but could affect negation statements try and use later
-  #Passive and Active vocies are calculated well
+  #Passive and Active vocies are calculated well already
   
   if student_answer == None or teacher_answer == None or abbr_vocab == None:
 
