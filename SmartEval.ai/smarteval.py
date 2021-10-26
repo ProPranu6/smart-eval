@@ -257,8 +257,183 @@ def report_card(teacher_student_answers_json=(None, None), student_answers_path=
   report_csv = pd.concat([report_csv, extra_info], axis=0)
   return report_csv
 
+
+  
+ import tensorflow as tf
+from tensorflow import keras as K
+from tensorflow.keras.layers import Dense, Input, Concatenate, Dot
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Model
+import datetime
+
+def convert_to_BERT_vecs(sen):
+
+  if sen != str(np.nan):
+    sen = re.sub("\\n+|\t+", " " , sen.strip())
+    sen = re.sub("\[[0-9]+\]|:", "" , sen)
+    sen_chunks = re.split('(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', sen)
+    sen_chunks_ref = []
+    for se in sen_chunks:
+      if len(se.split(" ")) >=128 :
+        for part in range(len(se.split())//128):
+          sen_chunks_ref.append(se[part*128:(part+1)*128])
+      else:
+        sen_chunks_ref.append(se)
+    
+    embed_sen = enc.encode(sen_chunks_ref)
+      
+    embed_sen = np.average(embed_sen, axis=0)
+  else:
+    embed_sen = np.array([0.])
+  return embed_sen
+  
+def prepare_dataset(data_json=None, data_csv_tea=None, data_csv_stu=None, train=True, from_json=True):
+  global enc
+  if from_json:
+    tea_answers, stu_answers, question_count = csv_from_json_v2(data_json)
+  else:
+    tea_answers, stu_answers, question_count = pd.read_csv(data_csv_tea), pd.read_csv(data_csv_stu), pd.read_csv(data_csv_tea).shape[1] 
+
+  model_name = 'distilbert-base-nli-stsb-mean-tokens'
+  enc = SentenceTransformer(model_name)
+
+  tea_answers = tea_answers.applymap(convert_to_BERT_vecs)
+  stu_answers = stu_answers.applymap(convert_to_BERT_vecs)
+  
+  if train:
+    gdm = ground_truth_scores(data_json)
+    Y = []
+   
+  X1 = []
+  X2 = []
+  for ta in range(1, len(tea_answers.columns)+1):
+    teacher_answer = tea_answers[str(ta)][0]
+    for sa in range(stu_answers.shape[0]):
+      student_answer = stu_answers[str(ta)][sa]
+      if len(student_answer) != 1: 
+        X1.append(teacher_answer)
+        X2.append(student_answer)
+        if train:
+          Y.append(gdm[str(ta)][sa])
+    
+  X1, X2, Y = np.array(X1), np.array(X2), np.array(Y).astype(np.float32) if train else -1
+
+  return X1, X2, Y
+
+def normalize(arr, t_min, t_max):
+    norm_arr = []
+    diff = t_max - t_min
+    diff_arr = max(arr) - min(arr)    
+    for i in arr:
+        temp = (((i - min(arr))*diff)/diff_arr) + t_min
+        norm_arr.append(temp)
+   
+    return np.array(norm_arr)
+
+def model_and_train_v1(x1p, x2p, y, epo, lr):
+  x1in = Input(shape=(768,))
+  x2in = Input(shape=(768,))
+  dot = Dot(axes=1, normalize=True)([x1in, x2in])
+  
+  d1 = Dense(100, activation='relu')
+  d2 = Dense(50, activation='relu')
+  #d3 = Dense(108, activation='linear')
+  d4 = Dense(20, activation='relu')
+  
+  x1 = d1(x1in)
+  x1 = d2(x1)
+  #x1 = d3(x1)
+  x1 = d4(x1)
+
+  x2 = d1(x2in)
+  x2 = d2(x2)
+  #x2 = d3(x2)
+  x2 = d4(x2)
+  diff = x1-x2
+  x = Concatenate(axis=1)([dot])
+  
+  xout = Dense(1, activation='relu')(x)
+  
+
+  model = Model(inputs=[x1in, x2in], outputs=xout)
+  model.compile(Adam(lr), loss='mse', metrics=['mae'])
+  model.fit(x = [x1p[:2000], x2p[:2000]], y = normalize(y[:2000], 0, 1), epochs=epo, validation_data=([x1p[2000:], x2p[2000:]], normalize(y[2000:], 0, 1)))
+
+  return model
+
+def model_and_train_v2(x1p, x2p, y, epo, lr):
+  x1in = Input(shape=(768,))
+  x2in = Input(shape=(768,))
+
+  dot = Dot(axes=1, normalize=True)([x1in, x2in])
+  diff = (x1in - x2in)
+  x = Concatenate(axis=1)([diff, dot])
+
+  #d1 = Dense(100, activation='relu')
+  #d2 = Dense(50, activation='relu')
+  #d3 = Dense(30, activation='linear')
+  d4 = Dense(5, activation='relu')
+  
+  #x = d1(x)
+  #x = d2(x)
+  #x = d3(x)
+  x = d4(x)
+
+  
+  
+  xout = Dense(1, activation='relu')(x)
+  
+
+  model = Model(inputs=[x1in, x2in], outputs=xout)
+  model.compile(Adam(lr), loss='mse', metrics=['mae'])
+  model.fit(x = [x1p[:2000], x2p[:2000]], y = normalize(y[:2000], 0, 1), epochs=epo, validation_data=([x1p[2000:], x2p[2000:]], normalize(y[2000:], 0, 1)))
+
+  return model
+  
+
+def model_and_train_v3(x1p, x2p, y, epo, lr, project_tensorboard=True):
+  
+  x1in = Input(shape=(768,))
+  x2in = Input(shape=(768,))
+  
+  
+  #d1 = Dense(200, activation='relu')
+  #d2 = Dense(50, activation='relu')
+  #d3 = Dense(108, activation='linear')
+  #d4 = Dense(20, activation='relu')
+  
+  #x1 = d1(x1in)
+  #x1 = d2(x1)
+  #x1 = d3(x1)
+  #x1 = d4(x1)
+
+  #x2 = d1(x2in)
+  #x2 = d2(x2)
+  #x2 = d3(x2)
+  #x2 = d4(x2)
+
+  dot = Dot(axes=1, normalize=True)([x1in, x2in])
+  diff = K.backend.sqrt(K.backend.sum(K.backend.square(x1in - x2in), axis=-1))
+  x = Concatenate(axis=1)([dot, diff])
+  
+  xout = Dense(1, activation='relu')(x)
+  log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+  tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
+  model = Model(inputs=[x1in, x2in], outputs=xout)
+  model.compile(Adam(lr), loss='mse', metrics=['mae'])
+  model.fit(x = [x1p[:2000], x2p[:2000]], y = normalize(y[:2000], 0, 1), epochs=epo, validation_data=([x1p[2000:], x2p[2000:]], normalize(y[2000:], 0, 1)), callbacks=[tensorboard_callback])
+
+  if project_tensorboard:
+    # Load the TensorBoard notebook extension
+    %load_ext tensorboard
+    %tensorboard --logdir logs/fit
+  return model
+
 if __name__ == "__main__":
-  json_obj = [{"1":"i m bad boy"}, {"1":"i m bad boy"}, {"1":"i dont know the answer"}, {"1":"i m good boy"}]
-  inputs = """{0}"""
-  #report = report_card(teacher_student_answers_json = ('/content/data.json',) , max_marks=5, relative_marking=False, json_load_version="v2")
-  #print(report.to_string())
+  
+  X1, X2, Y = prepare_dataset('/content/data.json')
+  #X1.shape, X2.shape, Y.shape
+  model = model_and_train_v3(X1, X2, Y,400, 7e-5)
+  print(np.squeeze(model.predict([X1, X2]))[:10]*5, Y[:10])
+  
