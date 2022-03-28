@@ -36,7 +36,8 @@ class CannyEval():
   except:
     print("Please provide the file for accessing intial abbreviaiton vocab dictionary")
 
-
+  SUGGESTED_SEMANTIC_WEIGHT = 1
+  SUGGESTED_PHRASE_WEIGHT = 0
   def __init__(self):
     #dynamic imports
     
@@ -49,9 +50,25 @@ class CannyEval():
     self.orienting_sens = dict()
     self.disorienting_sens = dict()
     self.class_strength = 0
-    self.semantic_match_weight = 0.8
-    self.phrase_match_weight = 0.2
+    self.semantic_match_weight = 'take_suggestion'
+    self.phrase_match_weight = 'take_suggestion'
     pass
+
+  # Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+
+  @staticmethod
+  def _check_input(inp):
+    val = inp['1']
+    for ans in val[1]:
+        assert type(ans) == type([]), 'Incompatable Json Format'
+        for an in ans:
+            assert type(an) == type("string"), 'Incompatable Json Format'
+    return 
+  
+  
+    
 
   @staticmethod
   def prepare_abbreviation_vocab(cls, updating_dictionary=dict() ):
@@ -169,6 +186,23 @@ class CannyEval():
 
     return tea_answers, stu_answers, question_count
 
+  @staticmethod
+  def text_to_json(text):
+    """Takes string of the pattern '[t]<model answer>[q]student answer' and repeated pattern of the aforementioned pattern for how many ever 
+        model and student answers"""
+    #json format = {1: ['teacher answer 1', [['studen answer 1'], ['student answer 2']] ], 2:['teacher answer 2', [['student answer 1], ...]]}
+    data_dict = dict()
+    count = 1
+    for record in text.split('[p]'):
+      teacher_answer = re.findall('\[t\](.*?)\[s\]', record)
+      record = re.sub('\[t\](.*?)\[s\]', '', record, )
+      student_answers = re.split('\[s\]', record)
+      data_dict[str(count)] = []
+      data_dict[str(count)].append(teacher_answer[0])
+      data_dict[str(count)].append([[ans] for ans in student_answers])
+      count += 1
+    return json.loads(json.dumps(data_dict))
+
   def ground_truth_scores(self, teacher_student_json_path):
 
     jf = open(teacher_student_json_path)
@@ -245,10 +279,11 @@ class CannyEval():
     teacher_answer_imps = self.extract_ImPs(teacher_answer)
 
     
+    
     #calculating ImPs-orientation-scores 
     temp_jaccard, (orph, disorph) = self.fuzz_iou(student_answer_imps, teacher_answer_imps)
     
-
+    
     if (question_id == -1 or student_id == -1) or (student_id == 1):
       self.orienting_phrases[question_id] = []
       self.disorienting_phrases[question_id] = []
@@ -287,7 +322,7 @@ class CannyEval():
       embed_student_answer = encoder.encode(student_answer_chunks_ref)
 
       correctness, (orph_sens, disorph_sens) = self.answer_similarities(embed_teacher_answer, embed_student_answer, question_id, student_id) #sklearn.metrics.pairwise.cosine_similarity(embed_teacher_answer, embed_student_answer, dense_output=True)[0][0] #rows are teacher_sens, cols are student_sens
-      correctnesses.append(correctness*self.semantic_match_weight + self.phrase_match_weight*temp_jaccard)
+      correctnesses.append(correctness*(self.SUGGESTED_SEMANTIC_WEIGHT if self.semantic_match_weight == "take_suggestion" else self.semantic_match_weight) + (self.SUGGESTED_PHRASE_WEIGHT if self.phrase_match_weight == "take_suggestion" else self.phrase_match_weight)*temp_jaccard)
       orph_sens_m += orph_sens
       disorph_sens_m += disorph_sens
 
@@ -369,11 +404,12 @@ class CannyEval():
   def extract_ImPs(self, text):
     """Extracts ImPs like proper nouns, data, time objects etc which shouldn't be modified by student's 
     in their answeres and have to literally mention them as it is"""
-
+    
     #Extracting propernouns
     tagged_sent = pos_tag(text.split())
+    total_phrases = set([word.lower() for word,_ in tagged_sent])
     propernouns = [re.sub('\W', '', word.lower()) for word,pos in tagged_sent if pos == 'NNP' or pos == 'NNPS' or pos == "NN" or pos == "NNS"]
-
+   
     
     #Extracting date formats : 1st January 2021, 01-01-2021, 01-01-21, January 1st, 2021
     date1 = '[0-9]{2}'
@@ -389,112 +425,122 @@ class CannyEval():
       dates = self.get_longest_match(re.findall(P, text))
     except:
       dates = []
-    
-    return set(dates+propernouns) 
+    Imps = set(dates+propernouns) 
+    self.SUGGESTED_PHRASE_WEIGHT = len(Imps)/len(total_phrases)
+    self.SUGGESTED_SEMANTIC_WEIGHT = 1 - self.SUGGESTED_PHRASE_WEIGHT
+    return Imps
 
-  def report_card(self, data_json = None, teacher_student_answers_json=("Deprecated", None, None), teacher_student_answers_csv=(None,None), max_marks=5, relative_marking=False, integer_marking=False, json_load_version ="v2"):
+  def report_card(self, data_json = None, data_text = None, teacher_student_answers_json=("Deprecated", None, None), teacher_student_answers_csv=(None,None), max_marks=5, relative_marking=False, integer_marking=False, json_load_version ="v2"):
 
-    abbreviations = self.ABBR_VOCAB
-    global tea_answers_for_eval, stu_answers_for_eval
-    #DATAFRAME GENERATION ========================================================================================================
-    if data_json != None:
-      
-      if json_load_version == "v1":
-        tea_answers, stu_answers, question_count = self.csv_from_json_v1(teacher_student_answers_json[0], teacher_student_answers_json[1])   #Works only for JSON in format {ColumnName : {Index : RowValue}}   
-      elif json_load_version == "v2":
-        tea_answers, stu_answers, question_count = self.csv_from_json_v2(data_json, teacher_student_answers_json[0])
-
-      tea_answers_for_eval = tea_answers.apply(self.chunkize_abbreviate_correct, abbr_vocab = abbreviations, spell_check='none')
-      stu_answers_for_eval = stu_answers.apply(self.chunkize_abbreviate_correct, abbr_vocab = abbreviations, spell_check='none')
-
-      for qid in range(question_count):
-        self.json_obj[str(qid+1)] = [tea_answers_for_eval[str(qid+1)][0], stu_answers_for_eval[str(qid+1)].values.tolist()]
-        
-                  
-    else:  
-      stu_answers = pd.read_csv(teacher_student_answers_csv[1])
-      tea_answers = pd.read_csv(teacher_student_answers_csv[0])
-      question_count = len(tea_answers.columns)
-      self.csv_obj['teacher_answers'], self.csv_obj['student_answers'] = tea_answers, stu_answers
-    
-    
-    #OUTPUT DATAFRAME PREP ================================================================================================================
-    class_strength = len(stu_answers)
-    student_marks = dict()
-    for q in range(question_count):
-      student_marks["Question " + str(q+1)] = []
-
-    #MODEL SELECTION =======================================================================================================================
-    models = ['sentence-transformers/paraphrase-MiniLM-L6-v2','distilbert-base-nli-stsb-mean-tokens']
-    encoders = []
-    for model in models:
-      encoder = SentenceTransformer(model)
-      encoders.append(encoder)
-    
-    #EVALUATION CALLING ON ANSWER PAIRS ======================================================================================================
-    encode_ta = True
-    for col in range(1, question_count+1):
-        teacher_answer = tea_answers[str(col)][0]
-        encode_ta = True
-        for stu in range(class_strength):
-          if stu_answers[str(col)][stu] != str(np.nan): #len(teacher_answer.split(" "))
-            correctnesses, _, _ = self.evaluate(stu_answers[str(col)][stu], teacher_answer,encoders=encoders, abbr_vocab=abbreviations, gen_context_spread=125, spell_check='None', student_id = stu+1, question_id=col, encode_teacher_answer=encode_ta) #smaller context spread is more specific but less accurate at encoding
-            to_append = correctnesses[-1]
-          else:
-            to_append = 0
-          
-          if to_append <0.6:
-            to_append = max(0, to_append - (1-to_append)/4) #(correctnesses[-1] -(1 - correctnesses[-1])/2) if correctnesses[-1] <0.6 else correctnesses[-1]) #human_induced bias = sqrt(distance_from_high_score)
-          elif to_append >=0.95:
-            to_append = 1.
-          else:
-            pass
-
-          student_marks["Question " + str(col)].append(to_append)
-          encode_ta = False
-    
-    #REPORT PREP ===============================================================================================================================
-    report = student_marks
-    report_norm = np.empty((question_count, class_strength)) #it's row = class_strength*questions = len
-    for r in range(1, question_count+1):
-        report_norm[r-1] = report["Question " + str(r)]
-
-    report_norm_copy = copy.deepcopy(report_norm) #max mark
-   
-    for r in range(question_count):
-      true_max =  max(report_norm_copy[r]) if relative_marking else 1
-      true_min = 0 
-      for c in range(class_strength):
-        unrefined_score = (report_norm_copy[r][c]-true_min)/(true_max-true_min)*max_marks
-        unrefined_score = np.round(unrefined_score, decimals=2)
-        report_norm[r][c] = np.rint(unrefined_score) if integer_marking else  unrefined_score # mark = normalize(percentage), base_min_mark = 0, base_max_mark = true_max
-
-    for q in range(question_count):
-      student_marks["Question " + str(q+1)] = report_norm[q]
-      
-    report_csv = pd.DataFrame(student_marks)
-    report_csv["Student Aggregate"] = np.sum(report_norm, axis=0)
+    if data_text != None:
+      data_json = CannyEval.text_to_json(data_text)
     try:
-      report_csv["Timestamp"] = stu_answers["Timestamp"]
-      report_csv["Username"] = stu_answers["Username"]
-      report_csv["Rollno"] = stu_answers["Rollno"]
-    except:
-      pass
-    
-    extra_info = dict()
-    for k, v in enumerate(np.mean(report_norm, axis=1)):
-      extra_info["Question " + str(k+1)] = v
+      CannyEval._check_input(data_json)
+      abbreviations = self.ABBR_VOCAB
+      global tea_answers_for_eval, stu_answers_for_eval
+      #DATAFRAME GENERATION ========================================================================================================
+      if data_json != None:
+        
+        if json_load_version == "v1":
+          tea_answers, stu_answers, question_count = self.csv_from_json_v1(teacher_student_answers_json[0], teacher_student_answers_json[1])   #Works only for JSON in format {ColumnName : {Index : RowValue}}   
+        elif json_load_version == "v2":
+          tea_answers, stu_answers, question_count = self.csv_from_json_v2(data_json, teacher_student_answers_json[0])
 
-    extra_info["Student Aggregate"] = np.mean(report_csv["Student Aggregate"])
-    extra_info = pd.DataFrame(extra_info, index=["Class Mean"])
-    report_csv = pd.concat([report_csv, extra_info], axis=0)
+        tea_answers_for_eval = tea_answers.apply(self.chunkize_abbreviate_correct, abbr_vocab = abbreviations, spell_check='none')
+        stu_answers_for_eval = stu_answers.apply(self.chunkize_abbreviate_correct, abbr_vocab = abbreviations, spell_check='none')
 
+        for qid in range(question_count):
+          self.json_obj[str(qid+1)] = [tea_answers_for_eval[str(qid+1)][0], stu_answers_for_eval[str(qid+1)].values.tolist()]
+          
+                    
+      else:  
+        stu_answers = pd.read_csv(teacher_student_answers_csv[1])
+        tea_answers = pd.read_csv(teacher_student_answers_csv[0])
+        question_count = len(tea_answers.columns)
+        self.csv_obj['teacher_answers'], self.csv_obj['student_answers'] = tea_answers, stu_answers
+      
+      
+      #OUTPUT DATAFRAME PREP ================================================================================================================
+      class_strength = len(stu_answers)
+      student_marks = dict()
+      for q in range(question_count):
+        student_marks["Question " + str(q+1)] = []
+
+      #MODEL SELECTION =======================================================================================================================
+      models = ['sentence-transformers/paraphrase-MiniLM-L6-v2','distilbert-base-nli-stsb-mean-tokens']
+      encoders = []
+      for model in models:
+        encoder = SentenceTransformer(model)
+        encoders.append(encoder)
+      
+      #EVALUATION CALLING ON ANSWER PAIRS ======================================================================================================
+      encode_ta = True
+      for col in range(1, question_count+1):
+          teacher_answer = tea_answers[str(col)][0]
+          encode_ta = True
+          for stu in range(class_strength):
+            if stu_answers[str(col)][stu] != str(np.nan): #len(teacher_answer.split(" "))
+              correctnesses, _, _ = self.evaluate(stu_answers[str(col)][stu], teacher_answer,encoders=encoders, abbr_vocab=abbreviations, gen_context_spread=125, spell_check='None', student_id = stu+1, question_id=col, encode_teacher_answer=encode_ta) #smaller context spread is more specific but less accurate at encoding
+             
+              to_append = correctnesses[-1]
+            else:
+              to_append = 0
+            
+            if to_append <-1: #<0.6
+              to_append = max(0, to_append - (1-to_append)/4) #(correctnesses[-1] -(1 - correctnesses[-1])/2) if correctnesses[-1] <0.6 else correctnesses[-1]) #human_induced bias = sqrt(distance_from_high_score)
+            elif to_append >=0.95:
+              to_append = 1.
+            else:
+              pass
+
+            student_marks["Question " + str(col)].append(to_append)
+            encode_ta = False
+      
+      #REPORT PREP ===============================================================================================================================
+      report = student_marks
+      report_norm = np.empty((question_count, class_strength)) #it's row = class_strength*questions = len
+      for r in range(1, question_count+1):
+          report_norm[r-1] = report["Question " + str(r)]
+
+      report_norm_copy = copy.deepcopy(report_norm) #max mark
     
-    return report_csv
+      for r in range(question_count):
+        true_max =  max(report_norm_copy[r]) if relative_marking else 1
+        true_min = 0 
+        for c in range(class_strength):
+          unrefined_score = (report_norm_copy[r][c]-true_min)/(true_max-true_min)*max_marks
+          unrefined_score = np.round(unrefined_score, decimals=2)
+          report_norm[r][c] = np.rint(unrefined_score) if integer_marking else  unrefined_score # mark = normalize(percentage), base_min_mark = 0, base_max_mark = true_max
+
+      for q in range(question_count):
+        student_marks["Question " + str(q+1)] = report_norm[q]
+        
+      report_csv = pd.DataFrame(student_marks)
+      report_csv["Student Aggregate"] = np.sum(report_norm, axis=0)
+      try:
+        report_csv["Timestamp"] = stu_answers["Timestamp"]
+        report_csv["Username"] = stu_answers["Username"]
+        report_csv["Rollno"] = stu_answers["Rollno"]
+      except:
+        pass
+      
+      extra_info = dict()
+      for k, v in enumerate(np.mean(report_norm, axis=1)):
+        extra_info["Question " + str(k+1)] = v
+
+      extra_info["Student Aggregate"] = np.mean(report_csv["Student Aggregate"])
+      extra_info = pd.DataFrame(extra_info, index=["Class Mean"])
+      report_csv = pd.concat([report_csv, extra_info], axis=0)
+
+      
+      return report_csv
+    except AssertionError as msg:
+      return msg, type(msg)
 
   def get_modstu_answers(self, ques_id=0, stu_id=0):
     teacher_student_json = self.json_obj
     return teacher_student_json[str(ques_id+1)][0], teacher_student_json[str(ques_id+1)][2][2+stu_id]
+  
 
 if __name__ == "__main__":
   #evaluatorA = CannyEval()
