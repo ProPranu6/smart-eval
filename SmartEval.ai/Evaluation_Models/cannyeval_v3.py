@@ -43,7 +43,7 @@ class CannyEval():
     
     self.json_obj = dict()
     self.csv_obj = {'teacher_answers':None, 'student_answers' : None}
-    self.report = None
+    self.report = "Yet to be Generated!"
     self.gdm = None
     self.orienting_phrases = dict()
     self.disorienting_phrases = dict()
@@ -532,7 +532,7 @@ class CannyEval():
       extra_info = pd.DataFrame(extra_info, index=["Class Mean"])
       report_csv = pd.concat([report_csv, extra_info], axis=0)
 
-      
+      self.report = report_csv
       return report_csv
     except AssertionError as msg:
       return msg, type(msg)
