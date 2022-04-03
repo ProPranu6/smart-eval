@@ -1,3 +1,4 @@
+from pandas.core.indexing import convert_to_index_sliceable
 
 from sentence_transformers import SentenceTransformer
 import sklearn
@@ -43,7 +44,7 @@ class CannyEval():
     
     self.json_obj = dict()
     self.csv_obj = {'teacher_answers':None, 'student_answers' : None}
-    self.report = "Yet to be Generated!"
+    self.report = "Not Yet Generated!"
     self.gdm = None
     self.orienting_phrases = dict()
     self.disorienting_phrases = dict()
@@ -52,6 +53,9 @@ class CannyEval():
     self.class_strength = 0
     self.semantic_match_weight = 'take_suggestion'
     self.phrase_match_weight = 'take_suggestion'
+    self.semantic_scores = None
+    self.phrase_match_scores = None
+    self.phrases_ratios = None
     pass
 
   # Online Python compiler (interpreter) to run Python online.
@@ -283,6 +287,12 @@ class CannyEval():
     #calculating ImPs-orientation-scores 
     temp_jaccard, (orph, disorph) = self.fuzz_iou(student_answer_imps, teacher_answer_imps)
     
+    if type(self.semantic_scores) == type(None):
+      self.semantic_scores = np.zeros((self.csv_obj['student_answers'].shape))
+      self.phrase_match_scores = np.zeros((self.csv_obj['student_answers'].shape))
+      self.phrases_ratios  = np.zeros((self.csv_obj['teacher_answers'].shape[1]))
+    
+    
     
     if (question_id == -1 or student_id == -1) or (student_id == 1):
       self.orienting_phrases[question_id] = []
@@ -325,7 +335,13 @@ class CannyEval():
       correctnesses.append(correctness*(self.SUGGESTED_SEMANTIC_WEIGHT if self.semantic_match_weight == "take_suggestion" else self.semantic_match_weight) + (self.SUGGESTED_PHRASE_WEIGHT if self.phrase_match_weight == "take_suggestion" else self.phrase_match_weight)*temp_jaccard)
       orph_sens_m += orph_sens
       disorph_sens_m += disorph_sens
-
+      self.semantic_scores[student_id-1][question_id-1] += correctness
+    
+    
+    self.semantic_scores[student_id-1][question_id-1] /= 2
+    self.phrase_match_scores[student_id-1][question_id-1] = temp_jaccard
+    self.phrases_ratios[question_id-1] = self.SUGGESTED_PHRASE_WEIGHT  
+    
     print("\nDone")
     correctnesses.append(np.mean(np.array(correctnesses), axis=0))
     
@@ -457,7 +473,8 @@ class CannyEval():
         stu_answers = pd.read_csv(teacher_student_answers_csv[1])
         tea_answers = pd.read_csv(teacher_student_answers_csv[0])
         question_count = len(tea_answers.columns)
-        self.csv_obj['teacher_answers'], self.csv_obj['student_answers'] = tea_answers, stu_answers
+      
+      self.csv_obj['teacher_answers'], self.csv_obj['student_answers'] = tea_answers, stu_answers
       
       
       #OUTPUT DATAFRAME PREP ================================================================================================================
