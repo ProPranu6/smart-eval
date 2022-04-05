@@ -33,7 +33,7 @@ class CannyEval():
   
   ABBR_VOCAB = dict()
   try:
-    BIG_STRING = open('/content/abbreviation_vocab.txt').read()
+    BIG_STRING = open('./abbreviation_vocab.txt').read()
   except:
     print("Please provide the file for accessing intial abbreviaiton vocab dictionary")
 
