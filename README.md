@@ -2,9 +2,14 @@
 Smart-Eval-StartUp-Idea-Implementations
 
 # Dependencies
+* sentence-transformers
 * textblob
 * symspellpy
 * tqdm
+* neuralcoref
+* flask
+* dill
+* fuzzywuzzy
 
 
 # Target Services
@@ -35,6 +40,10 @@ Smart-Eval-StartUp-Idea-Implementations
 ♟Split single sentence with a potential of being split sentence to bring it to the form of model answer
 
 ♟Better the quality of Immutable Phrases(that is to identify ImPs among Nouns rather than declaring nouns as ImPs)
+
+♟️Better Thresholds for semantic similarities
+
+♟️Make an end-to-end architecture that considers factors on which marking should be done automatically
 
 ♟Identify the Strongest and Weakest Concepts of a student from his/her report
 
