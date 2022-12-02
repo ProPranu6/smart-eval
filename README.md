@@ -1,12 +1,12 @@
 #  Canny.ai
 
-![alt text](https://github.com/propranu6/smart-eval/blob/main/whole.PNG)
+![alt text](https://github.com/propranu6/smart-eval/blob/spotlight/whole.PNG)
 
 # Algorithm
 
-![alt text](https://github.com/propranu6/smart-eval/blob/main/algo-1.PNG)
+![alt text](https://github.com/propranu6/smart-eval/blob/spotlight/algo-1.PNG)
 
-![alt text](https://github.com/propranu6/smart-eval/blob/main/algo-2.PNG)
+![alt text](https://github.com/propranu6/smart-eval/blob/spotlight/algo-2.PNG)
 
 Smart-Eval-StartUp-Idea-Implementations
 
