@@ -1,0 +1,50 @@
+<p>
+    This is example of <span id="1" class="highlighted yellow">highlighted</span> text.
+  </p>
+  <p>
+    <span id="2" class="highlighted yellow">Multiple lines can be <br>
+      highlighted, too.</span>
+  </p>
+  <p>
+    This is <span id="3" class="highlighted pink">pink</span>.
+  </p>
+  <p>
+    <span id="4" class="highlighted yellow animating">This will be marked <br>in 2 seconds with animation.</span>
+  </p>
+<style>
+    p {
+  font-family: Verdana;
+}
+
+.highlighted {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  transition: background-size .5s;
+}
+
+.highlighted.yellow {
+  background-image: linear-gradient(to top, yellow 100%, transparent 0);
+}
+
+.highlighted.pink {
+  background-image: linear-gradient(to top, rgba(218, 138, 33, 0.719) 100%, transparent 0);
+}
+
+.highlighted.animating {
+  background-size: 0 auto;
+}
+
+</style>
+<script>
+    document.getElementById("1").innerText = "hello bro";
+    document.getElementById("2").innerText = "how";
+    document.getElementById("3").innerText = "are u";
+    document.getElementById("4").innerText = "yuvaeaj";
+    setTimeout(function() {
+  var animating = document.querySelectorAll('.highlighted.animating');
+  for (var i = 0; i < animating.length; i++) {
+    animating[i].classList.remove('animating');
+  }
+}, 200);
+</script>
