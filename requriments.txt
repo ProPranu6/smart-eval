@@ -1,0 +1,12 @@
+uvicorn
+fastapi
+pandas
+scikit-learn
+sentence-transformers
+textblob
+matplotlib
+fuzzywuzzy
+symspellpy
+tqdm
+fuzzywuzzy
+dill
