@@ -1,6 +1,0 @@
-sentence-transformers
-textblob
-symspellpy
-tqdm
-fuzzywuzzy
-dill
