@@ -1,1 +1,0 @@
-This directory contains all the files related to setting up and running a light weight api for smarteval
