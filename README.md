@@ -1,7 +1,20 @@
-# probably-smart-eval
+#  Canny.ai
+
+![alt text](https://github.com/propranu6/smart-eval/blob/main/whole.PNG)
+
+# Algorithm
+
+![alt text](https://github.com/propranu6/smart-eval/blob/main/algo-1.PNG)
+
+![alt text](https://github.com/propranu6/smart-eval/blob/main/algo-2.PNG)
+
 Smart-Eval-StartUp-Idea-Implementations
 
+
+#### Website : https://propranu6.github.io/smart-eval/
+
 # Dependencies
+
 * sentence-transformers
 * textblob
 * symspellpy
