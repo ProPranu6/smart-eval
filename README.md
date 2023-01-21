@@ -11,8 +11,8 @@
 Smart-Eval-StartUp-Idea-Implementations
 
 
-#### Website UI/UX Prototype : https://propranu6.github.io/smart-eval/
-#### Website Pages Prototype :  https://docs.google.com/presentation/d/1B8184sIq5UEOrNoA136GnUzvSoB10K5FbbEDzDopzng/edit?usp=sharing
+#### Website UI/UX Prototype : [Website](https://propranu6.github.io/smart-eval/)
+#### Website Pages Prototype :  [WebPages Design Template](https://docs.google.com/presentation/d/1B8184sIq5UEOrNoA136GnUzvSoB10K5FbbEDzDopzng/edit?usp=sharing)
 
 
 # Dependencies
